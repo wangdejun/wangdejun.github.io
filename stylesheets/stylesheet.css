@@ -35,8 +35,11 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-ol, ul {
+ol, ul{
   list-style: none;
+}
+li{
+  list-style: square;
 }
 
 table {
