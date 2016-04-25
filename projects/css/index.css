@@ -1,0 +1,129 @@
+<style type="text/css">
+	body{margin:0px;		
+		font-family:Microsoft YaHei;font-size:16px;}
+
+	.nav{width:100%;height:125px;background-color:white;}
+
+	.nav-top{width:100%;height:30px;background-color:#2c3339;/**#f8f8f8**/
+		margin:0;}
+  
+	.navmain{display:block;width:1205px;height:96px; margin:auto; }
+
+	.logo{float:left;
+		font-family:Microsoft YaHei;font-weight:bolder;font-size:30px;color:#39a030;
+		vertical-align: middle;
+		height:35px;width:70px;margin-top:27px;}
+
+	.logotext{float:left;
+		font-family:Microsoft YaHei;font-size:28px;color:#333333;
+		vertical-align: middle;
+		height:35px;margin-top:26px;}
+
+	.category{float:right;height:20px;width:700px;margin-top:38px;}
+
+	.category li{float:right;display: inline-block;
+		width:117px;margin-right:10px;
+
+		font-family:Microsoft YaHei;font-weight:lighter;font-size:16px;color:#666666;
+		vertical-align: middle;}
+		.big{width:150px;}
+
+	.query{width:20px;height:20px;
+		background:transparent url(img/icon/icon.png) no-repeat;
+        background-position: 0px -40px;
+        background-color:white;}
+
+	.banner{border:0px;margin:0;left:0px;display:block;width:100%;height:460px;background-color:pink;}
+
+	.banner img{margin:auto;width:1605px;height:460px;}
+
+	.threeproducts{position:relative;
+		margin:auto;width:1205px;height:297px;background-color:white}
+
+	.product{display:inline-block;width:396px;height:297px;margin:0px;}
+
+	.product1{background-color:white;}
+	.product2{background-color:white;}
+	.product3{background-color:white;}
+
+	.producticon{border:0px;margin-top:0px;margin-left:0;display:inline-block;
+		height:297px;width:107px;background-color:white;}
+
+    .productintro{display:inline-block;height:297px;width:281px;background-color:white;margin-left:0px;}
+
+    .productintrocontent{margin-top: 61px;height:173px;width:238px;
+    	margin-left: 8px;
+    	background-color: #f8e8e8;}
+	.producticonimg1{
+		border:0px;
+		margin-top:67px;margin-left:0px;
+    	width:80px;height:80px;
+        background:transparent url(img/icon/icon.png) no-repeat;
+        background-position: 0px -160px;
+
+    }
+
+    .producticonimg2{
+    	border:0px;
+		margin-top:67px;margin-left:0px;
+    	width:80px;height:80px;
+        background:transparent url(img/icon/icon.png) no-repeat;
+        background-position: 0px -280px;
+        background-color:white;
+    }
+
+    .producticonimg3{
+    	border:0px;
+		margin-top:67px;margin-left:0px;
+    	width:80px;height:80px;
+        background:transparent url(img/icon/icon.png) no-repeat;
+        background-position: 0px -400px;
+        background-color:white;
+    }
+
+
+	.env{width:100%;height:225px;
+		display:-webkit-flex;flex-direction:row;flex-wrap:nowrap;}
+
+
+	.env img{width:316px;height:225px;display:block;margin-right:1.5px;}
+
+	.content{margin:auto;width:1205px;height: 1551px;background-color:#f8f8f8;}
+
+	.class{float:left;}
+	.tabcontainer{
+			height:50px;width:100%;left:0px;margin-top:81px;
+			margin-bottom:30px;
+			background-color:#f8f8f8;}
+
+	.tab{display:inline-block;margin:0;
+		box-shadow:gray 3px 3px 10px;
+		font-family:Microsoft YaHei;font-size:16px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	.tab1{height:50px;width:200px;background-color:#39a030;line-height:50px;color:white;}
+	.tab2{height:50px;width:200px;background-color:white;line-height:50px;color:#666666;}
+
+	.card{margin-top:30px;width:960px;height:1218px;background-color:#f8f8f8;
+		display:-webkit-flex;
+		flex-direction:row;flex-wrap:wrap;justify-content:space-between}
+
+	.cardcontent{box-shadow: #666 0px 0px 5px;align-items:end;
+		width:225px;height:227px;background-color:white;margin:0;border-radius: 2px;}
+
+	.cardcontent1{margin-top: 0px;margin-left: 0px;}
+	.cardcontent20{margin-right:0px;margin-bottom: 0px}
+	li{list-style: none;}
+	.cardcontent img{height:124px;width:223px;margin-left:1px;margin-right:1px;}
+
+	.side{float:right;width:223px;height:1028px;background-color:pink;margin-top:81px;}
+	.numcontainer{height:30px;width:100%;margin-top:31px;}
+	.num{float:right;height:30px;width:302px;
+		background-color: #9dd8b1;line-height:30px;}
+	.num li{width:26px;display:inline-block;margin:auto;text-align:right}
+	.foot{width:100%;height:262px;
+		background-color: #2c3339}
+
+</style>
