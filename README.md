@@ -42,11 +42,11 @@
               </ul>
             </p>
       </section>
-    </div>
-    <div id="footer_wrap" class="outer" class ="col-xs-12 col-xs-offset-1 col-md-6">
-        <p><a style="text-decoration:none" href="https://www.zhihu.com/people/wang-de-jun-8">知乎</a></p>
-        <p><a style="text-decoration:none" href="https://www.dejunwang.com/index.html">dejunwang.com</a></p>
-        <p><a style="text-decoration:none" href="mailto:88dejun@gmail.com">88dejun@gmail.com</a></p>
+          <div id="footer_wrap" class="outer" class ="col-xs-12 col-xs-offset-1 col-md-6">
+        <p><a style="text-decoration:none" href="https://www.zhihu.com/people/wang-de-jun-8">My zhihu</a></p>
+        <p><a style="text-decoration:none" href="https://www.dejunwang.com/index.html">MyBlog</a></p>
+        <p><a style="text-decoration:none" href="mailto:88dejun@gmail.com">MyEmail</a></p>
         <p><a style="text-decoration:none" href="https://github.com/wangdejun/">https://github.com/wangdejun</a></p>
-        <p><a style="text-decoration:none" href="">xdcamer</a></p>
+        <p><a style="text-decoration:none" href="">wechat:xdcamer</a></p>
     </div>
+
