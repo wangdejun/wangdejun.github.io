@@ -166,7 +166,7 @@ pre, code {
   color: #222;
   background-color: #fff;
 
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-family:"Microsoft YaHei", "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
 
   border-radius: 2px;
@@ -271,7 +271,7 @@ Full-Width Styles
 .inner {
   position: relative;
   max-width: 640px;
-  padding: 20px 10px;
+  padding: 0px 0px;
   margin: 0 auto;
 }
 
@@ -291,14 +291,13 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #212121;
-  /**
+  /*background: #212121;*/
   background: -moz-linear-gradient(top, #373737, #212121);
   background: -webkit-linear-gradient(top, #373737, #212121);
   background: -ms-linear-gradient(top, #373737, #212121);
   background: -o-linear-gradient(top, #373737, #212121);
   background: linear-gradient(top, #373737, #212121);
-  **/
+
 }
 
 #header_wrap .inner {
