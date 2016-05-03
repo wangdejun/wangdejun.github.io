@@ -92,7 +92,7 @@
     .producticonimg2{background-position: 0px -280px;}
     .producticonimg3{background-position: 0px -400px;}
 /*环境展示页*/
-	.env{width:100%;height:225px;
+	.env{width:100%;height:225px;display:flex;
 		display:-webkit-flex;flex-direction:row;flex-wrap:nowrap;}
 	.env img{width:316px;height:225px;display:block;margin-right:1.5px;}
 /*课程内容页*/
@@ -112,7 +112,7 @@
 	.tab1{height:50px;width:200px;background-color:#39a030;line-height:50px;color:white;}
 	.tab2{height:50px;width:200px;background-color:white;line-height:50px;color:#666666;}
 
-	.card{margin-top:30px;width:960px;height:1218px;
+	.card{margin-top:30px;width:960px;height:1218px;display:flex;
 		display:-webkit-flex;
 		flex-direction:row;flex-wrap:wrap;justify-content:space-between}
 
