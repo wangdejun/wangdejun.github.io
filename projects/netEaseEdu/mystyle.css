@@ -132,10 +132,10 @@
 
 
 	.numcontainer{height:30px;width:100%;margin-top:31px;}
-	.num{float:right;height:30px;width:302px;
-		background-color: #9dd8b1;line-height:30px;}
-	.num li{width:26px;display:inline-block;margin:auto;text-align:right}
-
+	.num{float:right;height:30px;width:320px;
+		line-height:30px;}
+	.num li{cursor:pointer;width:26px;display:inline-block;margin:auto;text-align:center;}
+	.num li:hover{background-color: #9dd8b1;}
 	
 
 	.textintro1{margin-top:5px;}
@@ -171,7 +171,7 @@
 		height:50px;width:183px;display:inline-block;margin-left:16px;margin-top:19px;}
 	.hotcontentcard div{width:124px;height:50px;float:right;}
 	.hotcontentcard img{float:left;}
-	.hotcontentcard p{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px;font-color:gray;font-family:Microsoft YaHei}
+	.hotcontentcard p{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px;font-color:gray;font-family:Microsoft YaHei;}
 
 	.hotcontentcard span{position:absolute; top:30px;left:65px;}
 	.foot{
