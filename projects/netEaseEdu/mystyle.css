@@ -105,8 +105,8 @@
 	.tab{display:inline-block;margin:0;
 		box-shadow:gray 3px 3px 10px;
 		font-family:Microsoft YaHei;font-size:16px;
-		text-align: center;
-		vertical-align: middle;
+		text-align: center
+		;vertical-align: middle;
 	}
 
 	.tab1{height:50px;width:200px;background-color:#39a030;line-height:50px;color:white;}
@@ -116,17 +116,19 @@
 		display:-webkit-flex;
 		flex-direction:row;flex-wrap:wrap;justify-content:space-between}
 
-	.cardcontent{box-shadow: #666 0px 0px 2px;align-items:end;position: relative;
+	.cardcontent{cursor:pointer;box-shadow: #666 0px 0px 2px;align-items:end;position: relative;
 		width:225px;height:227px;background-color:white;margin:0;}
 
-
+	.cardcontent p{font:14px/1.2 "Microsoft YaHei";overflow: hidden;
+		white-space:nowrap;text-overflow: ellipsis;line-height:25px;}
+	.cardcontent-intro{padding:0px 5px 5px 5px;}
 	.cardcontenthover{position:absolute;top:0px;left:0px;z-index:999;width:500px;height:300px;
 	}
 
 	.cardcontent1{margin-top: 0px;margin-left: 0px;}
 	.cardcontent20{margin-right:0px;margin-bottom: 0px}
 	li{list-style: none;}
-	.cardcontent img{height:124px;width:223px;margin-left:1px;margin-right:1px;}
+	.cardcontent img{height:124px;width:223px;margin-left:3px;margin-right:3px;}
 
 
 	.numcontainer{height:30px;width:100%;margin-top:31px;}
