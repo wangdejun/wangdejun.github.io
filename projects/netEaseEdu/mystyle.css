@@ -1,6 +1,7 @@
 <style type="text/css">
 	body{margin:0px;		
-		font-family:Microsoft YaHei;font-size:16px;}
+		font-family:Microsoft YaHei;font-size:16px;
+		background-color:blue;}
 
 	.nav{width:100%;height:125px;background-color:white;}
 
@@ -142,10 +143,12 @@
 	}
 	.textintro p{font-weight:bold;font-size:16px;}
 	.videointro p{font-size:14px;}
-    .textintro{
-    	width:100%;height:55px;box-shadow:0 1px 1px 1px;background-color:yellow;}
+	.intro .textintro{font:20px/1.5 'Microsoft YaHei';
+	width:100%;height:55px;box-shadow:0px 1px 0px 1px #ddd;}
 
-    .videointro{margin-top:2px;width:100%;height:175px;background-color: green;}
+    .side .intro{box-shadow:0x 1px 0px 1px #ddd;}
+
+    .videointro p{font:16px/1.2 'Microsoft YaHei';vertical-align: middle;}
     .videointro img{margin:auto;}
 
 
@@ -154,17 +157,21 @@
 	.side{float:right;width:223px;height:1028px;margin-top:81px;border:1px solid #eee;box-shadow: #ecebeb 1px 1px 1px;}
 	.side .sort{height:57px;width:224px;background-color:white;
 		border-bottom:1px solid #dddddd;}
-	.side .sort div{
-		height:15px;width:150px;background-color: blue;
-		font-family:Microsoft YaHei;font-size:15px;margin-left:20px;
+	#hotsort span{
+		height:15px;width:150px;
+		font-family:Microsoft YaHei;font-size:17px;margin-left:20px;
 		font-color:#333333;
 	}
+	
 
-	.hotcontentcard{height:50px;width:183px;display:inline-block;margin-left:16px;margin-top:19px;}
+	.hotcontentcard{
+		position:relative;
+		height:50px;width:183px;display:inline-block;margin-left:16px;margin-top:19px;}
 	.hotcontentcard div{width:124px;height:50px;float:right;}
 	.hotcontentcard img{float:left;}
-	.hotcontentcard p{text-overflow: hidden;font-size:14px;font-color:gray;font-family:Microsoft YaHei}
+	.hotcontentcard p{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px;font-color:gray;font-family:Microsoft YaHei}
 
+	.hotcontentcard span{position:absolute; top:30px;left:65px;}
 	.foot{
 		display:inline-block;
 		width:100%;height:262px;
