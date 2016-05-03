@@ -129,7 +129,7 @@
 	.cardcontent1{margin-top: 0px;margin-left: 0px;}
 	.cardcontent20{margin-right:0px;margin-bottom: 0px}
 	li{list-style: none;}
-	.cardcontent img{height:124px;width:223px;margin-left:3px;margin-right:3px;}
+	.cardcontent img{height:124px;width:219px;margin:3px;}
 
 
 	.numcontainer{height:30px;width:100%;margin-top:31px;}
@@ -219,8 +219,8 @@
 		width:400px;margin-left:48px;
 		line-height:2;
 	}
-	.connect{float: right;margin-left:70px;}
-
+	.connect{float:right;margin-left:70px;}
+	.connect li a:hover{list-style:default;}
 	.footerright{
 		margin-top:82px;
 		font-family:Microsoft YaHei;font-size:12px;font-color:white;
