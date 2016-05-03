@@ -138,13 +138,22 @@
 	.num li:hover{background-color: #9dd8b1;}
 	
 
-	.textintro1{margin-top:5px;}
+
+	/*侧栏格式
+*/
+	.textintro1{padding-left:20px;line-height:50px;text-align:left;vertical-align:middle;
+		box-sizing:border-box;background-color:white;box-shadow:0.5px 1px 2px #aaa}
+
+
+
+
+
 	.intro{text-align:center;}
 	.intro p{text-align:center;vertical-align:middle;
 		font-family:Microsoft YaHei;
 	}
 	.textintro p{font-weight:bold;font-size:16px;}
-	.videointro p{font-size:14px;}
+/*	.videointro p{font-size:14px;}*/
 	.intro .textintro{font:20px/1.5 'Microsoft YaHei';
 	width:100%;height:55px;box-shadow:0px 1px 0px 1px #ddd;}
 
@@ -157,18 +166,31 @@
 
 /*边栏，视频及热点排行*/
 	.side{float:right;width:223px;height:1028px;margin-top:81px;border:1px solid #eee;box-shadow: #ecebeb 1px 1px 1px;}
-	.side .sort{height:57px;width:224px;background-color:white;
+	.side .sort{height:57px;width:224px;background-color:#aaa;
 		border-bottom:1px solid #dddddd;}
-	#hotsort span{
-		height:15px;width:150px;
-		font-family:Microsoft YaHei;font-size:17px;margin-left:20px;
+	
+	#hotsort{
+		box-sizing: border-box;
+		display: block;
+		padding-left:20px;
+		margin-top:20px;
+		line-height:56px;width:inherit;
+		font-family:Microsoft YaHei;font-size:17px;margin-top:50px; 
 		font-color:#333333;
+		margin-top:10px;background-color:white;box-shadow:1px 1px 2px #aaa;
 	}
 	
+
+	.hotcontent{background-color:white;
+			margin-top:10px;background-color:white;
+			box-shadow:0.5px 2px 2px #aaa;
+		}
 
 	.hotcontentcard{
 		position:relative;
 		height:50px;width:183px;display:inline-block;margin-left:16px;margin-top:19px;}
+
+
 	.hotcontentcard div{width:124px;height:50px;float:right;}
 	.hotcontentcard img{float:left;}
 	.hotcontentcard p{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:14px;font-color:gray;font-family:Microsoft YaHei;}
