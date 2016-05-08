@@ -9,30 +9,17 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/bootrap/dist/css/bootstrap-theme.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 		<style>
-			.div{
-				background-color: blue;
-				color:blue;
-			}
-			h1{
-				color: blue;
+			body{
+				padding:0px;
 			}
 			.box-row{
-				display: -webkit-flex; /* Safari */
-  				display: flex;
-  				flex-wrap:wrap;
+				display: -webkit-flex;
+  			display: flex;
+  			flex-wrap:wrap;
 				width: auto;
-				justify-content:space-around;/* space-around*/
-/*				position: absolute;
-				left:50%;
-				top:50%;
-				transform:translate(-50%,-50%);
-				-ms-transform:translate(-50%,-50%); 	
-				-moz-transform:translate(-50%,-50%); 	
-				-webkit-transform:translate(-50%,-50%); 
-				-o-transform:translate(-50%,-50%); */
+				justify-content:space-around;
 				color:blue;
 				margin-top: 20px;
-				/*border:1px solid #666;*/
 				background-color: #eee;
 			}
 			.message-box{
@@ -43,8 +30,7 @@
 				width:450px;
 				border-radius: 0px;
 				margin:15px 10px 10px 10px;
-				box-shadow: 5px 10px 10px #aaa;
-/*				border:1px solid #666;*/
+				box-shadow: 10px 10px 10px #aaa;
 				background-color: white;
 			}
 			.price{float: left;
@@ -60,13 +46,12 @@
 				font-family: "Microsoft YaHei" "STHeiti";
 			}
 		</style>
-
 	</head>
+	
 	<body>
 		<div id = "app"></div>
-
+		
 		<script type = "text/babel">
-
 			var MessageBoxRow = React.createClass({
 				render:function(){
 					return (
@@ -102,20 +87,11 @@
 							<MessageBox/>
 							<MessageBox/>
 							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
 						</div>
 					);
 				}
 			});
-
+			
 			var MessageBox = React.createClass({
 				render:function(){
 					return (
@@ -128,7 +104,6 @@
 					);
 				}
 			});
-
 			var Subimg = React.createClass({
 				 render:function(){
 				 	return(
@@ -138,17 +113,15 @@
 				 	)
 				 }
 			});
-
 			var Submessage = React.createClass({
 				 render:function(){
 				 	return(
 				 		<div>
-				 		<h3 className = "price">￥5000</h3>
+				 			<h3 className = "price">￥5000</h3>
 				 		</div>
 				 	)
 				 }
 			});
-
 			var Footer  = React.createClass({
 				render:function(){
 					return(
@@ -158,9 +131,8 @@
 					)
 				}
 			})
-
-			ReactDOM.render(<MessageBoxRow/>, document.getElementById('app'),
-				function(){console.log('渲染完成啦！！')});
+			//render
+			ReactDOM.render(<MessageBoxRow/>, document.getElementById('app'),function(){console.log('渲染完成啦!')});
 		</script>
 	</body>
 </html>
