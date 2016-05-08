@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<meta charset ="utf-8">
+		<title>学习React</title>
+		<script src = "bower_components/react/react.js"></script>
+		<script src = "bower_components/react/react-dom.js"></script>
+		<script src ="bower_components/bowser/src/bowser.js"></script>
+		<link rel="stylesheet" type="text/css" href="bower_components/bootrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="bower_components/bootrap/dist/css/bootstrap-theme.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+		<style>
+			.div{
+				background-color: blue;
+				color:blue;
+			}
+			h1{
+				color: blue;
+			}
+			.box-row{
+				display: -webkit-flex; /* Safari */
+  				display: flex;
+  				flex-wrap:wrap;
+				width: auto;
+				justify-content:space-around;/* space-around*/
+/*				position: absolute;
+				left:50%;
+				top:50%;
+				transform:translate(-50%,-50%);
+				-ms-transform:translate(-50%,-50%); 	
+				-moz-transform:translate(-50%,-50%); 	
+				-webkit-transform:translate(-50%,-50%); 
+				-o-transform:translate(-50%,-50%); */
+				color:blue;
+				margin-top: 20px;
+				/*border:1px solid #666;*/
+				background-color: #fff;
+			}
+			.message-box{
+				text-align: center;
+				padding: 0px 0px 10px 0px;
+				display: inline-block;
+				color:#333;
+				width:150px;
+				border-radius: 0px;
+				margin:45px 15px 15px 15px;
+				box-shadow: 4px 3px 8px #aaa;
+/*				border:1px solid #666;*/
+				background-color: white;
+			}
+			.price{float: left;
+				margin-left: 20px;
+				color:#faa;
+				font-family: monospace;
+				font-weight: lighter;
+			}
+			.foottext{
+				color:#faa;
+			}
+			.head{
+				font-family: "Microsoft YaHei" "STHeiti";
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id = "app"></div>
+
+		<script type = "text/babel">
+
+			var MessageBoxRow = React.createClass({
+				render:function(){
+					return (
+						<div className = "box-row">
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+						</div>
+					);
+				}
+			});
+
+			var MessageBox = React.createClass({
+				render:function(){
+					return (
+						<div className = "message-box">
+						<Subimg/>
+						<h4 className="head">CHANEL</h4>
+						<Submessage/>
+						<Footer/>
+						</div>
+					);
+				}
+			});
+
+			var Subimg = React.createClass({
+				 render:function(){
+				 	return(
+				 		<div>
+				 			<img src='chanel.jpg' />
+				 		</div>
+				 	)
+				 }
+			});
+
+			var Submessage = React.createClass({
+				 render:function(){
+				 	return(
+				 		<div>
+				 		<h3 className = "price">￥5000</h3>
+				 		</div>
+				 	)
+				 }
+			});
+
+			var Footer  = React.createClass({
+				render:function(){
+					return(
+						<div className="foottext">
+						<small>dejunwang.github.io</small>
+						</div>
+					)
+				}
+			})
+
+			ReactDOM.render(<MessageBoxRow/>, document.getElementById('app'),
+				function(){console.log('渲染完成啦！！')});
+		</script>
+	</body>
+</html>
