@@ -51,7 +51,7 @@
 				password =document.getElementById("password"),
 				message = document.getElementById('message'),
 				message2 = document.getElementById('message_2');
-
+				
 			var addEvent = document.addEventListener ?
 				function(elem,type,listener,useCapture){
 					elem.addEventListener(type,listener,useCapture);
@@ -61,21 +61,20 @@
 				//验证表单input元素是否valid
 			function invalidInput(node,msg){
 				var msg ="";
-
 				if(node== mobile && !node.validity.valid){
 					msg="请输入正确的手机号码1";
 					message.innerHTML = msg;
 				}else{
+					//如果手机号符合要求，那么不显示
 					message.innerHTML = "";
 				}
-
 				if(node==password && node.value.length < 6){
 					msg="密码长度必须大于6位1";
 					message2.innerHTML = msg;
 				}else{
+					//如果密码符合要求，那么不显示
 					message2.innerHTML = "";
 				}
-
 				if(msg){
 					node.classList.add("j-error");
 					message.classList.add("j-error");
@@ -118,7 +117,6 @@
 					disableSubmit(true);
 				});
 		})();
-		
 	</script>
 </body>
 </html>
