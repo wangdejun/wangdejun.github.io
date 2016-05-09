@@ -19,7 +19,7 @@
 		.m-form button{border:1px solid #ddd;width:100%;cursor:pointer;background-color:#2d7dca;color:white;height:30px;}
 		.m-form .tip{padding-left:6em;font-size:12px;color:#C0C0C0;}
 		.m-form .u-txt{width:160px;padding:3px;border:1px solid #aaa;}
-		.m-form .j-error{color:red; border-color:red;}
+		.m-form .j-error{color:red; border-color:red;font-size: 0.5em}
 		.m-form .j-disabled{cursor:default; background-color:#ddd;}
 	</style>
 </head>
@@ -33,10 +33,11 @@
 				<input id="mobile" type="tel" name="mobile" maxlength="11" required pattern="^1[0-9]{10}$" class="u-txt">
 				<span class="tip">11位数字手机号码</span>
 			</div>
+			<div class="msg_2" id="message_2"></div>
 			<div>
-			<label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
-			<input id="password" type="password" name="name" class="u-txt" value="">
-			<span class="tip">密码为6-16位字符</span>
+				<label for="password">密&nbsp;&nbsp;&nbsp;码：</label>
+				<input id="password" type="password" name="name" class="u-txt" value="">
+				<span class="tip">密码为6-16位字符</span>
 			</div>
 			<div> <button id="loginBtn">登&nbsp;&nbsp;&nbsp;录</button></div>
 		</fieldset>
@@ -47,7 +48,10 @@
 		(function(){
 			var form=document.forms.loginForm,
 				mobile = document.getElementById("mobile"),
-				password =document.getElementById("password");
+				password =document.getElementById("password"),
+				message = document.getElementById('message'),
+				message2 = document.getElementById('message_2');
+
 			var addEvent = document.addEventListener ?
 				function(elem,type,listener,useCapture){
 					elem.addEventListener(type,listener,useCapture);
@@ -57,18 +61,30 @@
 				//验证表单input元素是否valid
 			function invalidInput(node,msg){
 				var msg ="";
-				if(node== mobile && !node.validity.valid)
-					msg="请输入正确的手机号码";
-				if(node==password && node.value.length < 6)
-					msg="密码长度必须大于6位";
+
+				if(node== mobile && !node.validity.valid){
+					msg="请输入正确的手机号码1";
+					message.innerHTML = msg;
+				}else{
+					message.innerHTML = "";
+				}
+
+				if(node==password && node.value.length < 6){
+					msg="密码长度必须大于6位1";
+					message2.innerHTML = msg;
+				}else{
+					message2.innerHTML = "";
+				}
+
 				if(msg){
 					node.classList.add("j-error");
+					message.classList.add("j-error");
+					message2.classList.add("j-error");
 					node.focus();
 					return false;
 				}
 				return true;
 			}
-
 			function clearInvalid(node){
 				//show message();//略
 				node.classList.remove('j-error');
@@ -102,6 +118,7 @@
 					disableSubmit(true);
 				});
 		})();
+		
 	</script>
 </body>
 </html>
