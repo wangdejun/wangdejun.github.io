@@ -28,7 +28,7 @@
 			}
 			.message-box{
 				text-align: center;
-				padding: 0px 0px 10px 0px;
+				padding: 0px 0px 40px 0px;
 				display: inline-block;
 				color:#333;
 				width:450px;
@@ -38,15 +38,28 @@
 				background-color: white;
 			}
 			.price{
+				vertical-align: middle;
+				width:50%;
 				float: left;
 				margin-left: 50px;
 				color:#faa;
 				font-family: monospace;
 				font-weight: lighter;
 			}
+			.price span{
+				float:left;
+				font-size: 18px;
+			}
+			.price_num{
+				display: inline-block;
+				float:left;
+				background-color: yellow;
+			}
+
 			.foottext{
 				color:#faa;
 			}
+
 			.head{
 				font-family: "Microsoft YaHei" "STHeiti";
 			}
@@ -54,23 +67,13 @@
 	</head>
 	
 	<body>
-		<div id = "app">
-		</div>
-
+		<div id = "app"></div>
+		
 		<script type = "text/babel">
 			var MessageBoxRow = React.createClass({
 				render:function(){
 					return (
 						<div className = "box-row">
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
 							<MessageBox/>
 						</div>
 					);
@@ -101,8 +104,8 @@
 			var Submessage = React.createClass({
 				 render:function(){
 				 	return(
-				 		<div>
-				 			<h3 className = "price">￥5000</h3>
+				 		<div className = "price">
+				 			<span>$</span><span>5000</span><span><i className="fa fa-heart-o"></i></span>
 				 		</div>
 				 	)
 				 }

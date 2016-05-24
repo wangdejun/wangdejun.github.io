@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset = "utf-8">	
+	</head>
+	<body>
+		<div id="wang">haha</div>
+		<script type="text/javascript">
+			document.getElementById('wang').innerHTML = "<h1>change</h1>";
+			document.getElementById('wang').attach("onClick",popup);
+
+			function popup = function(){
+				alert("print wang!");
+			}
+
+			// obj = {
+			// 	data:['John Backus','John Hopcroft'],
+			// 	init:function(){
+			// 		document.getElementById('wang').onclick = ev =>{
+			// 			alert(this.data)
+			// 		}
+			// 	}
+			// }
+			// obj.init()
+			// const reducer = combineReducers(reducers)
+			// const finalCreateStore = applyMiddleware(promiseMiddleware,warningMiddleware,
+			// 	loggerMiddleware)(createStore)
+			// const store = finalCreateStore(reducer)
+		</script>
+	</body>
+</html>
