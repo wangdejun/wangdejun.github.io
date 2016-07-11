@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<meta charset ="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>瀑布流demo|React</title>
+		<script src = "bower_components/react/react.js"></script>
+		<script src = "bower_components/react/react-dom.js"></script>
+		<script src ="bower_components/bowser/src/bowser.js"></script>
+		<script src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+		<script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+		<style>
+			html{
+				padding: 0px;
+				margin: 0px
+			}
+			body{
+				padding:0px;
+				margin:0px;
+			}
+			h1{
+				font-size: 46px;
+			}
+			#app{
+				margin:auto;
+				padding:0px;
+				background-color: #f9f9f9;
+			}
+
+			img{margin: 0px}
+
+			.follow{font-size: 12px}
+
+			.user{
+				display: flex;
+				align-items:center;
+			}
+
+			.edge{
+				height: 5px
+			}
+			
+			#moments-back{
+				position: relative;
+			}
+			.prdlist{
+				width:50%;
+			}	
+			.prdlist p{
+				font-size: 12px;
+			}
+			#comments{
+				position: absolute;
+				display: flex;
+				align-items:center;
+				bottom:15px;
+			}
+			
+			#comments span{
+				font-size: 1.2rem;
+			}
+			.header{				
+				display: flex;
+				align-items:center;
+			}
+			.comment-list p{
+				overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    font-size: 14px;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+
+
+		<div class = "row container">
+			<div id = "app"></div>
+		</div>
+
+
+		<script type = "text/babel">
+			var Moments = React.createClass({
+				render:function(){
+					return(
+						//通过className来获取名称
+						<div className = "moments ">
+							<MomentTitle />
+							<MomentCard />
+							<MomentCard />
+							<MomentCard />
+							<MomentCard />
+							<MomentCard />
+						</div>
+					);
+				}
+			});
+			//head
+			var MomentTitle = React.createClass({
+				render:function(){
+					return(
+						<div className = "momenttitle">
+							<h3>MODESENS</h3>
+							<img src="./img/modesens/moments/moments-assets/channel@2x.png"/>
+						</div>
+					);
+				}
+			});
+
+			//moments-content
+			var MomentCard = React.createClass({
+				 render:function(){
+				 	return(
+				 		<div className = "momentcard">
+					 		<User/>
+					 		<MomentPost/>
+					 		<MomentImg/>
+					 		<MomentProduct/>
+				 		</div>
+				 	);
+				 }
+			});
+			var User = React.createClass({
+				 render:function(){
+				 	return(
+				 		<div className = "user">
+				 			<div className = "user-img col-xs-2 img-responsive">
+				 				<img src = "./img/modesens/moments/user.jpg" />
+				 			</div>
+				 			<div className = "col-xs-4">
+					 			<span>Tom Panxiaoxiao</span>
+					 			<p>5 mins ago</p>
+				 			</div>	
+
+				 			<button className="btn btn-danger" type = "button">Follow</button>
+				 		</div>
+				 	);
+				 }
+			});
+
+			var MomentPost = React.createClass({
+				render:function(){
+					return(
+						<div className = "momentpost col-xs-12">
+							<p>I used this outfit NY at the beginning at the beginning of winter. Boots form #JimmyChoo Handbag from my favorite designer #Dolce Gabbana Cannot wait spring to come and I...
+							</p>
+						</div>
+					);
+				}
+			});
+
+			var MomentImg = React.createClass({
+				render:function(){
+					return(
+						<div className = "momentimg">
+							<img className = "img-responsive" src = "./img/modesens/moments/moments_user_post.jpg"/>
+							<MomentSocial/>
+						</div>
+					);
+				}
+			});
+
+			var MomentSocial = React.createClass({
+				render:function(){
+					return(
+						<div className = "momentsocial">
+							<MomentLike/>
+							<MomentComment/>
+							<MomentMore/>
+						</div>
+					);
+				}
+			});
+			var MomentLike = React.createClass({
+				render:function(){
+					return(
+						<div className="momentlike">
+							<img src = "./img/modesens/moments/moments-assets/preview-like@2x.png"/>
+							<span>101</span>
+						</div>
+					);
+				}
+			})
+			var MomentComment = React.createClass({
+				render:function(){
+					return(
+						<div className="momentcomment">	
+							<img src = "./img/modesens/moments/moments-assets/preview-comment@2x.png"/>
+							<span>15</span>
+						</div>
+					);
+				}
+			})
+			var MomentMore = React.createClass({
+				render:function(){
+					return(
+						<div className="momentmore">
+							<img src = "./img/modesens/moments/moments-assets/more@2x.png"/>
+						</div>
+					);
+				}
+			})
+			var MomentProduct = React.createClass({
+				render:function(){
+					return(
+						<div className = "momentproduct">
+							<img src = "" />
+							<h1>Fendi</h1>
+							<p>Peekaboo Medium Leather Tote</p>
+						</div>
+					);
+				}
+			})
+
+			ReactDOM.render(<Moments />, document.getElementById('app'),function(){console.log('渲染完成啦!')});
+
+			$(".classname img").addClass("carousel-inner img-responsive img-rounded");
+		</script>
+	</body>
+</html>

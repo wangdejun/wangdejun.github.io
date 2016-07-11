@@ -1,0 +1,6 @@
+[Mon Apr 25 2016 22:14:06 GMT-0400 (Eastern Daylight Time)] layer "preview-like.png, 200% preview-like@2x.png": Duplicate path: preview-like.png
+[Mon Apr 25 2016 22:14:06 GMT-0400 (Eastern Daylight Time)] layer "preview-like.png, 200% preview-like@2x.png": Duplicate path: preview-like@2x.png
+[Mon Apr 25 2016 22:14:06 GMT-0400 (Eastern Daylight Time)] layer "preview-comment.png, 200% preview-comment@2x.png": Duplicate path: preview-comment.png
+[Mon Apr 25 2016 22:14:06 GMT-0400 (Eastern Daylight Time)] layer "preview-comment.png, 200% preview-comment@2x.png": Duplicate path: preview-comment@2x.png
+[Mon Apr 25 2016 22:14:06 GMT-0400 (Eastern Daylight Time)] layer "preview-share.png, 200% preview-share@2x.png": Duplicate path: preview-share.png
+[Mon Apr 25 2016 22:14:06 GMT-0400 (Eastern Daylight Time)] layer "preview-share.png, 200% preview-share@2x.png": Duplicate path: preview-share@2x.png

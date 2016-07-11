@@ -1,0 +1,152 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'devtools-terminal' ]
+2 info using npm@2.14.20
+3 info using node@v4.4.1
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'devtools-terminal', null ]
+7 verbose cache add spec devtools-terminal
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'devtools-terminal',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'devtools-terminal',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed devtools-terminal@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for devtools-terminal
+11 info addNameTag [ 'devtools-terminal', 'latest' ]
+12 silly mapToRegistry name devtools-terminal
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/devtools-terminal
+16 verbose addNameTag registry:https://registry.npmjs.org/devtools-terminal not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/devtools-terminal
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 18:28:59
+20 verbose request id 5bd351621601fb1b
+21 verbose etag "EWZI5KHKEJWQ1KCANGZ7E2WI7"
+22 http request GET https://registry.npmjs.org/devtools-terminal
+23 http 304 https://registry.npmjs.org/devtools-terminal
+24 verbose headers { date: 'Tue, 24 May 2016 10:28:59 GMT',
+24 verbose headers   via: '1.1 varnish',
+24 verbose headers   'cache-control': 'max-age=300',
+24 verbose headers   etag: '"EWZI5KHKEJWQ1KCANGZ7E2WI7"',
+24 verbose headers   age: '30',
+24 verbose headers   connection: 'keep-alive',
+24 verbose headers   'x-served-by': 'cache-hkg6825-HKG',
+24 verbose headers   'x-cache': 'HIT',
+24 verbose headers   'x-cache-hits': '1',
+24 verbose headers   'x-timer': 'S1464085739.353761,VS0,VE0',
+24 verbose headers   vary: 'Accept-Encoding' }
+25 silly get cb [ 304,
+25 silly get   { date: 'Tue, 24 May 2016 10:28:59 GMT',
+25 silly get     via: '1.1 varnish',
+25 silly get     'cache-control': 'max-age=300',
+25 silly get     etag: '"EWZI5KHKEJWQ1KCANGZ7E2WI7"',
+25 silly get     age: '30',
+25 silly get     connection: 'keep-alive',
+25 silly get     'x-served-by': 'cache-hkg6825-HKG',
+25 silly get     'x-cache': 'HIT',
+25 silly get     'x-cache-hits': '1',
+25 silly get     'x-timer': 'S1464085739.353761,VS0,VE0',
+25 silly get     vary: 'Accept-Encoding' } ]
+26 verbose etag https://registry.npmjs.org/devtools-terminal from cache
+27 verbose get saving devtools-terminal to /Users/wangdejun/.npm/registry.npmjs.org/devtools-terminal/.cache.json
+28 verbose correctMkdir /Users/wangdejun/.npm correctMkdir not in flight; initializing
+29 silly addNameTag next cb for devtools-terminal with tag latest
+30 silly addNamed devtools-terminal@0.1.3
+31 verbose addNamed "0.1.3" is a plain semver version for devtools-terminal
+32 silly cache afterAdd devtools-terminal@0.1.3
+33 verbose afterAdd /Users/wangdejun/.npm/devtools-terminal/0.1.3/package/package.json not in flight; writing
+34 verbose correctMkdir /Users/wangdejun/.npm correctMkdir not in flight; initializing
+35 verbose afterAdd /Users/wangdejun/.npm/devtools-terminal/0.1.3/package/package.json written
+36 silly install resolved [ { name: 'devtools-terminal',
+36 silly install resolved     preferGlobal: true,
+36 silly install resolved     version: '0.1.3',
+36 silly install resolved     author: { name: 'Dmitry Filimonov', email: 'me@dfilimonov.com' },
+36 silly install resolved     description: 'Terminal in Chrome Devtools',
+36 silly install resolved     contributors: [ [Object] ],
+36 silly install resolved     bin: { 'devtools-terminal': './bin/devtools-terminal' },
+36 silly install resolved     repository:
+36 silly install resolved      { type: 'git',
+36 silly install resolved        url: 'git+https://github.com/petethepig/devtools-terminal.git' },
+36 silly install resolved     dependencies:
+36 silly install resolved      { 'pty.js': '*',
+36 silly install resolved        optimist: '*',
+36 silly install resolved        'socket.io': '0.9.16',
+36 silly install resolved        mkdirp: '*' },
+36 silly install resolved     license: 'MIT',
+36 silly install resolved     engines: { node: '>=0.8' },
+36 silly install resolved     bugs: { url: 'https://github.com/petethepig/devtools-terminal/issues' },
+36 silly install resolved     homepage: 'https://github.com/petethepig/devtools-terminal',
+36 silly install resolved     _id: 'devtools-terminal@0.1.3',
+36 silly install resolved     scripts: {},
+36 silly install resolved     _shasum: 'e5c9cdb7bf95dc5ce79d70e86479c7aeb9ee8f15',
+36 silly install resolved     _from: 'devtools-terminal@latest',
+36 silly install resolved     _npmVersion: '2.1.4',
+36 silly install resolved     _nodeVersion: '0.10.32',
+36 silly install resolved     _npmUser: { name: 'petethepig', email: 'me@dfilimonov.com' },
+36 silly install resolved     maintainers: [ [Object] ],
+36 silly install resolved     dist:
+36 silly install resolved      { shasum: 'e5c9cdb7bf95dc5ce79d70e86479c7aeb9ee8f15',
+36 silly install resolved        tarball: 'https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz' },
+36 silly install resolved     directories: {},
+36 silly install resolved     _resolved: 'https://registry.npmjs.org/devtools-terminal/-/devtools-terminal-0.1.3.tgz',
+36 silly install resolved     readme: 'ERROR: No README data found!' } ]
+37 info install devtools-terminal@0.1.3 into /usr/local/lib
+38 info installOne devtools-terminal@0.1.3
+39 verbose installOne of devtools-terminal to /usr/local/lib not in flight; installing
+40 verbose correctMkdir /Users/wangdejun/.npm/_locks correctMkdir not in flight; initializing
+41 verbose lock using /Users/wangdejun/.npm/_locks/devtools-terminal-886f01cb395cd865.lock for /usr/local/lib/node_modules/devtools-terminal
+42 silly install write writing devtools-terminal 0.1.3 to /usr/local/lib/node_modules/devtools-terminal
+43 verbose unbuild lib/node_modules/devtools-terminal
+44 silly gentlyRm /usr/local/lib/node_modules/devtools-terminal is being purged from base /usr/local
+45 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/devtools-terminal
+46 verbose tar unpack /Users/wangdejun/.npm/devtools-terminal/0.1.3/package.tgz
+47 verbose tar unpacking to /usr/local/lib/node_modules/devtools-terminal
+48 silly gentlyRm /usr/local/lib/node_modules/devtools-terminal is being purged
+49 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/devtools-terminal
+50 silly gunzTarPerm modes [ '755', '644' ]
+51 error tar.unpack untar error /Users/wangdejun/.npm/devtools-terminal/0.1.3/package.tgz
+52 verbose unlock done using /Users/wangdejun/.npm/_locks/devtools-terminal-886f01cb395cd865.lock for /usr/local/lib/node_modules/devtools-terminal
+53 verbose fstream_path /usr/local/lib/node_modules/devtools-terminal
+54 verbose fstream_type Directory
+55 verbose fstream_class DirWriter
+56 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/devtools-terminal'
+56 verbose stack     at Error (native)
+57 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+57 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+57 verbose fstream_stack FSReqWrap.oncomplete (fs.js:82:15)
+58 verbose cwd /Users/wangdejun/wangdejun.github.io
+59 error Darwin 15.0.0
+60 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "-g" "devtools-terminal"
+61 error node v4.4.1
+62 error npm  v2.14.20
+63 error path /usr/local/lib/node_modules/devtools-terminal
+64 error code EACCES
+65 error errno -13
+66 error syscall mkdir
+67 error Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/devtools-terminal'
+67 error     at Error (native)
+67 error  { [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/devtools-terminal']
+67 error   errno: -13,
+67 error   code: 'EACCES',
+67 error   syscall: 'mkdir',
+67 error   path: '/usr/local/lib/node_modules/devtools-terminal',
+67 error   fstream_type: 'Directory',
+67 error   fstream_path: '/usr/local/lib/node_modules/devtools-terminal',
+67 error   fstream_class: 'DirWriter',
+67 error   fstream_stack:
+67 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+67 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+67 error      'FSReqWrap.oncomplete (fs.js:82:15)' ] }
+68 error Please try running this command again as root/Administrator.
+69 verbose exit [ -13, true ]
+70 verbose unbuild lib/node_modules/devtools-terminal
+71 silly gentlyRm /usr/local/lib/node_modules/devtools-terminal is being purged from base /usr/local
+72 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/devtools-terminal

@@ -9,72 +9,28 @@
 		<link rel="stylesheet" type="text/css" href="bower_components/bootrap/dist/css/bootstrap-theme.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 		<style>
-			body{
-				padding:0px;
-			}
-			#app{
-				margin:auto;
-				padding:0px;
-				margin:0px;
-			}
-			.box-row{
-				display: -webkit-flex;
-  				display: flex;
-  				flex-wrap:wrap;
-				width: auto;
-				justify-content:space-around;
-				color:blue;
-				margin-top: 20px;
-				background-color: #eee;
-			}
-			.message-box{
-				text-align: center;
-				padding: 0px 0px 40px 0px;
-				display: inline-block;
-				color:#333;
-				width:450px;
-				border-radius: 0px;
-				margin:15px 10px 10px 10px;
-				box-shadow: 10px 10px 10px #aaa;
-				background-color: white;
-			}
-			.price{
-				vertical-align: middle;
-				width:50%;
-				float: left;
-				margin-left: 50px;
-				color:#faa;
-				font-family: monospace;
-				font-weight: lighter;
-			}
-			.price span{
-				float:left;
-				font-size: 18px;
-			}
-			.price_num{
-				display: inline-block;
-				float:left;
-				background-color: yellow;
-			}
-
-			.foottext{
-				color:#faa;
-			}
-
-			.head{
-				font-family: "Microsoft YaHei" "STHeiti";
-			}
 		</style>
 	</head>
 	
 	<body>
-		<div id = "app"></div>
-		
+		<div id = "app">
+		</div>
+
 		<script type = "text/babel">
 			var MessageBoxRow = React.createClass({
 				render:function(){
 					return (
+						//通过className来获取名称
 						<div className = "box-row">
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
+							<MessageBox/>
 							<MessageBox/>
 						</div>
 					);
@@ -93,24 +49,27 @@
 					);
 				}
 			});
+
 			var Subimg = React.createClass({
 				 render:function(){
 				 	return(
 				 		<div>
-				 			<img src='chanel-4.jpg' />
+				 			<img src='./img/react-demo/chanel-4.jpg' />
 				 		</div>
 				 	)
 				 }
 			});
+
 			var Submessage = React.createClass({
 				 render:function(){
 				 	return(
-				 		<div className = "price">
-				 			<span>$</span><span>5000</span><span><i className="fa fa-heart-o"></i></span>
+				 		<div>
+				 			<h3 className = "price">￥5000</h3>
 				 		</div>
 				 	)
 				 }
 			});
+
 			var Footer  = React.createClass({
 				render:function(){
 					return(

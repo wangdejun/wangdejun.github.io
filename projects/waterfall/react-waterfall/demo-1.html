@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<meta charset ="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>瀑布流demo|React</title>
+		<script src = "bower_components/react/react.js"></script>
+		<script src = "bower_components/react/react-dom.js"></script>
+		<script src ="bower_components/bowser/src/bowser.js"></script>
+		<script src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+		<style>
+			html{
+				padding: 0px;
+				margin: 0px
+			}
+			body{
+				padding:0px;
+				margin:0px;
+			}
+			h1{
+				font-size: 46px;
+			}
+			#app{
+				margin:auto;
+				padding:0px;
+				background-color: #f9f9f9;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<div class = "row container">
+			<div id = "app">wangdejun</div>
+		</div>
+
+		<script type = "text/babel">
+
+			var TodoList = React.createClass({
+				render:function(){
+					var createItem=function(itemText){
+						return <li>{itemText}</li>;
+					};
+					return <ul>this.props.items.map(createItem)</ul>;
+				}
+			});
+
+			var TodoApp = React.createClass({
+				getInitialState:function(){
+					return {items:[],text:''};
+				},
+				onChange:function(e){
+					this.setState({text:e.target.value});
+				},
+				handleSubmit:function(e){
+					e.preventDefault();
+					var nextItems = this.state.items.concat([this.state.text]);
+					var nextText = "";
+					this.setState({items:nextItems,text:nextText});
+				},
+				render:function(){
+					return(
+						<div>
+							<h3>TODO</h3>
+							<TodoList items = {this.state.items} />
+							<form onSubmit = {this.handleSubmit}>
+								<input onChange = {this.onChange} value = {this.state.text} />
+								<button className = "button" style = {style}>{'Add #' + (this.state.items.length +1)}</button>
+							</form>
+						</div>
+					);
+				}
+			});
+			
+			ReactDOM.render(<TodoApp/>, document.getElementById('app'));
+		</script>
+	</body>
+</html>

@@ -1,123 +1,218 @@
 <html>
 	<head>
 		<meta charset ="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<title>瀑布流demo|React</title>
 		<script src = "bower_components/react/react.js"></script>
 		<script src = "bower_components/react/react-dom.js"></script>
 		<script src ="bower_components/bowser/src/bowser.js"></script>
+		<script src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="bower_components/bootrap/dist/css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="bower_components/bootrap/dist/css/bootstrap-theme.css" />
+		<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 		<style>
-			body{
-				padding:0px;
+			html{
+				padding: 0px;
+				margin: 0px;
+				font-size:14px;
 			}
-			#app{
+			body{
 				padding:0px;
 				margin:0px;
 			}
-			.box-row{
-				display: -webkit-flex;
-  				display: flex;
-  				flex-wrap:wrap;
-				width: auto;
-				justify-content:space-around;
-				color:blue;
-				margin-top: 20px;
-				background-color: #eee;
+			.edge{
 			}
-			.message-box{
-				text-align: center;
-				padding: 0px 0px 10px 0px;
-				display: inline-block;
-				color:#333;
-				width:450px;
-				border-radius: 0px;
-				margin:15px 10px 10px 10px;
-				box-shadow: 10px 10px 10px #aaa;
-				background-color: white;
+			p{
+				font-size: 14px;
 			}
-			.price{
-				float: left;
-				margin-left: 50px;
-				color:#faa;
-				font-family: monospace;
-				font-weight: lighter;
+			#app{
+				margin:0px;
+				padding:0px;
+				margin:auto;	
 			}
-			.foottext{
-				color:#faa;
+			img{margin: 0px}
+
+			.follow{font-size: 12px}
+
+			.user{
+				display: flex;
+				align-items:center;
 			}
-			.head{
-				font-family: "Microsoft YaHei" "STHeiti";
+
+			.edge{
+				height: 5px
+			}
+			
+			#moments-back{
+				position: relative;
+			}
+
+			.prdlist{
+				width:50%;
+			}	
+			.prdlist p{
+				font-size: 12px;
+			}
+
+			#comments{
+				position: absolute;
+				display: flex;
+				align-items:center;
+				bottom:15px;
+			}
+			
+			#comments span{
+				font-size: 1.2rem;
+			}
+
+			.header{				
+				display: flex;
+				align-items:center;
+			}
+
+			.comment-list p{
+				overflow: hidden;
+			    white-space: nowrap;
+			    text-overflow: ellipsis;
+			    font-size: 14px;
 			}
 		</style>
 	</head>
 	
 	<body>
-		<div id = "app">
+
+
+		<div class = "row" >
+			<div id = "app" class = "col-xs-12 col-sm-12">
+
+
+
+				<div class = "header col-xs-12" style = "height:80px">
+					<h2 class = "col-xs-offset-4">MODESENS</h2>
+				</div>
+
+				<div class = "edge col-xs-12" style = "background-color:#eee"></div>
+				<div class = "user-container">
+					<div class = "user col-xs-12 col-sm-12 col-md-12">
+						<img class ="userimg img-responsive col-xs-3 img-circle" src="./img/modesens/moments/user.jpg" alt="">
+						<div class = "col-xs-4">
+							<h6>王德军</h6>
+							<p>5 mins ago</p>
+						</div>
+						<div class = "moment col-xs-3 col-xs-offset-1">
+							<button type="button" class = "btn btn-danger">
+								<span class="follow">Follow<span>
+							</button>
+						</div>
+					</div>
+				</div>
+			<div class = "edge col-xs-12"></div>
+
+				<div id = "moments-back">
+					<img class="img-responsive col-xs-12 col-sm-12 col-md-12" src="./img/modesens/moments/moments_user_post.jpg" alt="Responsive image">
+				</div>
+				<div id = "comments" class = "col-xs-8" >
+					<img class = "img-responsive col-xs-2 col-xs-offset-1" src = "./img/modesens/moments/moments-assets/preview-like@2x.png"/>
+					<span>12</span>
+					<img class = "img-responsive col-xs-2 col-xs-offset-1" src = "./img/modesens/moments/moments-assets/preview-comment@2x.png"/>
+					<span>454</span>
+					<img class = "img-responsive col-xs-2 col-xs-offset-1" src = "./img/modesens/moments/moments-assets/more@2x.png"/>				
+				</div>
+			</div>		
+
+			<div class = "edge col-xs-12"></div>
+
+				<div class = "prdlist-container">
+					<div class = "prdlist col-xs-6">
+						<img class ="userimg img-responsive col-xs-4" src="./img/modesens/moments/bag.jpg" alt="#">
+						<h5 >Fendi<h5>
+						<p>Peekaboo Medium Leather Tote</p>
+					</div>
+
+					<div class = "prdlist col-xs-6">
+						<img class ="userimg img-responsive col-xs-4" src="./img/modesens/moments/bag.jpg" alt="#">
+						<h5 >Fendi<h5>
+						<p>Peekaboo Medium Leather Tote</p>
+					</div>
+					<hr>
+				</div>
+
+			<div class = "edge col-xs-12"></div>
+
+				<div class = "comment-list-container col-xs-12">
+					<div class = "comment-list col-xs-12">
+						<p class = "col-xs-11"><strong>indiaroseco: </strong> need a purse like that also to match my new suit for 1st day of</p>
+						<p class = "col-xs-11"><strong>somethingnavy: </strong> @jimmychoo Always a big fan</p>
+						<p class = "col-xs-11">View all 15 comments</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
-		<script type = "text/babel">
-			var MessageBoxRow = React.createClass({
-				render:function(){
-					return (
-						<div className = "box-row">
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
-							<MessageBox/>
+				<div class = "row" >
+			<div id = "app" class = "col-xs-12 col-sm-12">
+
+				<div class = "edge col-xs-12" style = "background-color:#eee"></div>
+				<div class = "user-container">
+					<div class = "user col-xs-12 col-sm-12 col-md-12">
+						<img class ="userimg img-responsive col-xs-3 img-circle" src="./img/modesens/moments/user.jpg" alt="">
+						<div class = "col-xs-4">
+							<h6>王德军</h6>
+							<p>5 mins ago</p>
 						</div>
-					);
-				}
-			});
-			
-			var MessageBox = React.createClass({
-				render:function(){
-					return (
-						<div className = "message-box">
-						<Subimg/>
-						<h2 className="head">CHANEL</h2>
-						<Submessage/>
-						<Footer/>
+						<div class = "moment col-xs-3 col-xs-offset-1">
+							<button type="button" class = "btn btn-danger">
+								<span class="follow">Follow<span>
+							</button>
 						</div>
-					);
-				}
-			});
-			var Subimg = React.createClass({
-				 render:function(){
-				 	return(
-				 		<div>
-				 			<img src='chanel-4.jpg' />
-				 		</div>
-				 	)
-				 }
-			});
-			var Submessage = React.createClass({
-				 render:function(){
-				 	return(
-				 		<div>
-				 			<h3 className = "price">￥5000</h3>
-				 		</div>
-				 	)
-				 }
-			});
-			var Footer  = React.createClass({
-				render:function(){
-					return(
-						<div className="foottext">
-						<small>dejunwang.github.io</small>
-						</div>
-					)
-				}
-			})
-			//render
-			ReactDOM.render(<MessageBoxRow/>, document.getElementById('app'),function(){console.log('渲染完成啦!')});
-		</script>
+					</div>
+				</div>
+			<div class = "edge col-xs-12"></div>
+
+				<div id = "moments-back">
+					<img class="img-responsive col-xs-12 col-sm-12 col-md-12" src="./img/modesens/moments/moments_user_post.jpg" alt="Responsive image">
+				</div>
+				<div id = "comments" class = "col-xs-8" >
+					<img class = "img-responsive col-xs-2 col-xs-offset-1" src = "./img/modesens/moments/moments-assets/preview-like@2x.png"/>
+					<span>12</span>
+					<img class = "img-responsive col-xs-2 col-xs-offset-1" src = "./img/modesens/moments/moments-assets/preview-comment@2x.png"/>
+					<span>454</span>
+					<img class = "img-responsive col-xs-2 col-xs-offset-1" src = "./img/modesens/moments/moments-assets/more@2x.png"/>				
+				</div>
+			</div>		
+
+			<div class = "edge col-xs-12"></div>
+
+				<div class = "prdlist-container">
+					<div class = "prdlist col-xs-6">
+						<img class ="userimg img-responsive col-xs-4" src="./img/modesens/moments/bag.jpg" alt="#">
+						<h5 >Fendi<h5>
+						<p>Peekaboo Medium Leather Tote</p>
+					</div>
+
+					<div class = "prdlist col-xs-6">
+						<img class ="userimg img-responsive col-xs-4" src="./img/modesens/moments/bag.jpg" alt="#">
+						<h5 >Fendi<h5>
+						<p>Peekaboo Medium Leather Tote</p>
+					</div>
+					<hr>
+				</div>
+
+			<div class = "edge col-xs-12"></div>
+
+				<div class = "comment-list-container col-xs-12">
+					<div class = "comment-list col-xs-12">
+						<p class = "col-xs-11"><strong>indiaroseco: </strong> need a purse like that also to match my new suit for 1st day of</p>
+						<p class = "col-xs-11"><strong>somethingnavy: </strong> @jimmychoo Always a big fan</p>
+						<p class = "col-xs-11">View all 15 comments</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
 	</body>
 </html>
