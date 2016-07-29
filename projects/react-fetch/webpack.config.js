@@ -1,9 +1,11 @@
 const webpack = require('webpack')
 module.exports = {
     entry: {
-        shop:[
-            "./src/react_fetch.js"
+        react_fetch:[
+            "./src/githubcardlist.js"
         ],
+        router:[
+        "./router.js"]
     },
     output: {
         path: __dirname,
