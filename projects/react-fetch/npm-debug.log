@@ -1,0 +1,139 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'object-assign',
+1 verbose cli   '-g',
+1 verbose cli   '--save-dev' ]
+2 info using npm@3.9.3
+3 info using node@v6.2.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData object-assign
+8 silly fetchNamedPackageData object-assign
+9 silly mapToRegistry name object-assign
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'object-assign',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   name: 'object-assign',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/object-assign
+14 verbose request uri https://registry.npmjs.org/object-assign
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 00:34:32
+17 verbose request id 008bd4aaa468bda0
+18 verbose etag "8DLMXNDMKX7XWSATVVJG4NWEV"
+19 http request GET https://registry.npmjs.org/object-assign
+20 http 304 https://registry.npmjs.org/object-assign
+21 verbose headers { date: 'Fri, 29 Jul 2016 16:34:31 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"8DLMXNDMKX7XWSATVVJG4NWEV"',
+21 verbose headers   age: '142',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-itm7425-ITM',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '4',
+21 verbose headers   'x-timer': 'S1469810071.464902,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Fri, 29 Jul 2016 16:34:31 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"8DLMXNDMKX7XWSATVVJG4NWEV"',
+22 silly get     age: '142',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-itm7425-ITM',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '4',
+22 silly get     'x-timer': 'S1469810071.464902,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose etag https://registry.npmjs.org/object-assign from cache
+24 verbose get saving object-assign to /Users/wangdejun/.npm/registry.npmjs.org/object-assign/.cache.json
+25 verbose correctMkdir /Users/wangdejun/.npm correctMkdir not in flight; initializing
+26 silly install normalizeTree
+27 silly loadCurrentTree Finishing
+28 silly loadIdealTree Starting
+29 silly install loadIdealTree
+30 silly cloneCurrentTree Starting
+31 silly install cloneCurrentTreeToIdealTree
+32 silly cloneCurrentTree Finishing
+33 silly loadShrinkwrap Starting
+34 silly install loadShrinkwrap
+35 silly loadShrinkwrap Finishing
+36 silly loadAllDepsIntoIdealTree Starting
+37 silly install loadAllDepsIntoIdealTree
+38 silly resolveWithNewModule object-assign@4.1.0 checking installable status
+39 silly cache add args [ 'object-assign', null ]
+40 verbose cache add spec object-assign
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'object-assign',
+41 silly cache add   scope: null,
+41 silly cache add   name: 'object-assign',
+41 silly cache add   rawSpec: '',
+41 silly cache add   spec: 'latest',
+41 silly cache add   type: 'tag' }
+42 silly addNamed object-assign@latest
+43 verbose addNamed "latest" is being treated as a dist-tag for object-assign
+44 info addNameTag [ 'object-assign', 'latest' ]
+45 silly mapToRegistry name object-assign
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry data Result {
+48 silly mapToRegistry   raw: 'object-assign',
+48 silly mapToRegistry   scope: null,
+48 silly mapToRegistry   name: 'object-assign',
+48 silly mapToRegistry   rawSpec: '',
+48 silly mapToRegistry   spec: 'latest',
+48 silly mapToRegistry   type: 'tag' }
+49 silly mapToRegistry uri https://registry.npmjs.org/object-assign
+50 verbose addNameTag registry:https://registry.npmjs.org/object-assign not in flight; fetching
+51 verbose get https://registry.npmjs.org/object-assign not expired, no request
+52 silly addNameTag next cb for object-assign with tag latest
+53 silly addNamed object-assign@4.1.0
+54 verbose addNamed "4.1.0" is a plain semver version for object-assign
+55 silly cache afterAdd object-assign@4.1.0
+56 verbose afterAdd /Users/wangdejun/.npm/object-assign/4.1.0/package/package.json not in flight; writing
+57 verbose correctMkdir /Users/wangdejun/.npm correctMkdir not in flight; initializing
+58 verbose afterAdd /Users/wangdejun/.npm/object-assign/4.1.0/package/package.json written
+59 silly loadAllDepsIntoIdealTree Finishing
+60 silly idealTree:prePrune lib
+60 silly idealTree:prePrune └── object-assign@4.1.0
+61 silly loadIdealTree Finishing
+62 silly currentTree lib
+63 silly idealTree lib
+63 silly idealTree └── object-assign@4.1.0
+64 silly generateActionsToTake Starting
+65 silly install generateActionsToTake
+66 warn checkPermissions Missing write access to /usr/local/lib/node_modules
+67 silly rollbackFailedOptional Starting
+68 silly rollbackFailedOptional Finishing
+69 silly runTopLevelLifecycles Starting
+70 silly runTopLevelLifecycles Finishing
+71 silly install printInstalled
+72 verbose stack Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+72 verbose stack     at Error (native)
+73 verbose cwd /Users/wangdejun/Sites/wangdejun.github.io/projects/react-fetch
+74 error Darwin 15.0.0
+75 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "object-assign" "-g" "--save-dev"
+76 error node v6.2.1
+77 error npm  v3.9.3
+78 error path /usr/local/lib/node_modules
+79 error code EACCES
+80 error errno -13
+81 error syscall access
+82 error Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+82 error     at Error (native)
+82 error  { Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+82 error     at Error (native)
+82 error   errno: -13,
+82 error   code: 'EACCES',
+82 error   syscall: 'access',
+82 error   path: '/usr/local/lib/node_modules' }
+83 error Please try running this command again as root/Administrator.
+84 verbose exit [ -13, true ]

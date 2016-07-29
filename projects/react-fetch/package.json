@@ -1,0 +1,46 @@
+{
+  "name": "react-fetch-data",
+  "version": "1.0.0",
+  "description": "modesens mobile web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wangdejun",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "foundation-apps": "^1.2.0",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.8.0",
+    "object-assign": "^4.1.0",
+    "react": "^15.2.0",
+    "react-addons-css-transition-group": "^15.2.0",
+    "react-foundation-apps": "^0.6.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.5.2",
+    "react-slick": "^0.12.2",
+    "react-swipe": "^5.0.3",
+    "sass-loader": "^4.0.0",
+    "slick-carousel": "^1.6.0",
+    "style-loader": "^0.13.1",
+    "swipe-js-iso": "^2.0.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "redux": "^3.5.2",
+    "whatwg-fetch": "^1.0.0"
+  },
+  "keywords": [
+    "react-fetch-data"
+  ]
+}
