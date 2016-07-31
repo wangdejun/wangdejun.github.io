@@ -16,7 +16,7 @@ class GithubCardList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            products:props.products||[]
+            products:props||[]
         }  
     }
 
@@ -42,13 +42,14 @@ class GithubCardList extends Component {
         return (
         	<div id = "github-card-list">
         		{
-        			this.state.githublist.map.((githublist,i)=>{
-        			return(
-        				<GithubCard
-        					className = "github-item"
-        					key = {i}
-        				/>)
-        			})
+        			for(var i = 0;i<6;i++){
+        				return(
+        					<GithubCard
+        						className = "github-item"
+        						key = {i}
+        					/>
+        				)
+        			}
         		}
         	</div>
         )

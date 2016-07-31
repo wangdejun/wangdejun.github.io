@@ -21,12 +21,7 @@ const router = ({ children, location }) => (
 render((
 <Router history={browserHistory}>
     <Route path="/" component={ router }>
-            <IndexRoute component={ App } />
-            <Route path = "shop" component={ Shop }/>
-            <Route path = "shop/:pid" component={ ShopCardDetail } />
-            <Route path = "moment" component = { MomentList } />
-            <Route path = "search" component = { SearchList } />
-            <Route path = "more" component = { More } />
+            <IndexRoute component={ GithubCardList } />
         </Route>
 </Router>
 ), document.getElementById('router'))

@@ -56,12 +56,7 @@ webpackJsonp([1,2],[
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: router },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: App }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'shop', component: Shop }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'shop/:pid', component: ShopCardDetail }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'moment', component: MomentList }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'search', component: SearchList }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'more', component: More })
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _githubcardlist2.default })
 	  )
 	), document.getElementById('router'));
 
