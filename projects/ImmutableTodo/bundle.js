@@ -64,8 +64,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//                          ^^^^^^^^^^
-
 	// src/app.js
 
 	var store = (0, _redux.createStore)(_reducer2.default);
@@ -28020,7 +28018,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.TodoList = TodoList;
+	exports.TodoList = undefined;
 
 	var _reactRedux = __webpack_require__(186);
 
@@ -28031,6 +28029,56 @@
 	var _actions = __webpack_require__(199);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	var TodoList = exports.TodoList = (0, _reactRedux.connect)(function mapStateToProps(state) {
+	  return { todos: state };
+	}, function mapDispatchToProps(dispatch) {
+	  return {
+	    addTodo: function addTodo(text) {
+	      return dispatch((0, _actions.addTodo)(text));
+	    },
+	    toggleTodo: function toggleTodo(id) {
+	      return dispatch((0, _actions.toggleTodo)(id));
+	    }
+	  };
+	})(components.TodoList);
+
+/***/ },
+/* 198 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.Todo = Todo;
+	exports.TodoList = TodoList;
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function Todo(props) {
+	  var todo = props.todo;
+
+
+	  if (todo.isDone) {
+	    return _react2.default.createElement(
+	      'strike',
+	      null,
+	      todo.text
+	    );
+	  } else {
+	    return _react2.default.createElement(
+	      'span',
+	      null,
+	      todo.text
+	    );
+	  }
+	}
 
 	function TodoList(props) {
 	  var todos = props.todos;
@@ -28056,80 +28104,23 @@
 	    };
 	  };
 
-	  return React.createElement(
-	    'div',
-	    { className: 'todo' },
-	    React.createElement('input', { type: 'text',
-	      className: 'todo__entry',
-	      placeholder: 'Add todo',
-	      onKeyDown: onSubmit }),
-	    React.createElement(
-	      'ul',
-	      { className: 'todo__list' },
-	      todos.map(function (t) {
-	        return React.createElement(
-	          'li',
-	          { key: t.get('id'),
-	            className: 'todo__item',
-	            onClick: toggleClick(t.get('id')) },
-	          React.createElement(Todo, { todo: t.toJS() })
-	        );
-	      })
-	    )
-	  );
-	}
-
-/***/ },
-/* 198 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.Todo = Todo;
-	exports.TodoList = TodoList;
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function Todo(props) {
-	  var todo = props.todo;
-
-	  if (todo.isDone) {
-	    return _react2.default.createElement(
-	      'strike',
-	      null,
-	      todo.text
-	    );
-	  } else {
-	    return _react2.default.createElement(
-	      'span',
-	      null,
-	      todo.text
-	    );
-	  }
-	} // src/components.js
-
-	function TodoList(props) {
-	  var todos = props.todos;
-
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'todo' },
-	    _react2.default.createElement('input', { type: 'text', placeholder: 'Add todo' }),
+	    _react2.default.createElement('input', { type: 'text',
+	      className: 'todo__entry',
+	      placeholder: 'Add todo',
+	      onKeyDown: onSubmit }),
 	    _react2.default.createElement(
 	      'ul',
 	      { className: 'todo__list' },
 	      todos.map(function (t) {
 	        return _react2.default.createElement(
 	          'li',
-	          { key: t.id, className: 'todo__item' },
-	          _react2.default.createElement(Todo, { todo: t })
+	          { key: t.get('id'),
+	            className: 'todo__item',
+	            onClick: toggleClick(t.get('id')) },
+	          _react2.default.createElement(Todo, { todo: t.toJS() })
 	        );
 	      })
 	    )
