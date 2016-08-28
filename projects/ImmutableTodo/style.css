@@ -1,0 +1,52 @@
+html, body, input, button {
+  font-family: Sawasdee;
+  font-size: 20px;
+}
+
+.todo{
+  width:500px;
+  margin:200px auto auto auto;
+}
+
+.todo__list {
+  width:100%;
+  background: lightseagreen;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.todo__item {
+  padding: .5em .25em;
+  border-bottom: solid 1px #eee;
+
+}
+
+.todo__item:hover {
+  background:lightcoral;
+  cursor: pointer;
+}
+
+.todo__entry {
+  border: solid 1px #ccc;
+  padding: .25em .5em;
+  border-radius: .2em;
+  background: #f3f3f3;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo__button {
+  border: 0;
+  border-radius: .2em;
+  background: #71B7FF;  
+  color: #fff;
+  padding: .25em .5em;
+  margin: .5em 0;
+  margin-right: .25em;
+  cursor: pointer;
+}
+
+.todo__button:hover {
+  background: #B2D8FF;
+}
