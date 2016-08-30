@@ -4,7 +4,7 @@ export function Todo(props) {
   const { todo } = props;
 
   if(todo.isDone) {
-    return <strike>{todo.text}</strike>;
+    return <em>{todo.text}</em>;
   } else {
     return <span>{todo.text}</span>;
   }
@@ -25,23 +25,24 @@ export function TodoList(props) {
     }
   };
 
-  const toggleClick = id => event => toggleTodo(id);
 
-  return (
-    <div className='todo'>
-      <input type='text'
-             className='todo__entry'
-             placeholder='Add todo'
-             onKeyDown={onSubmit} />
-      <ul className='todo__list'>
-        {todos.map(t => (
-          <li key={t.get('id')}
-              className='todo__item'
-              onClick={toggleClick(t.get('id'))}>
-            <Todo todo={t.toJS()} />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+const toggleClick = id => event => toggleTodo(id);
+
+    return (
+        <div className='todo'>
+          <input type='text'
+                 className='todo__entry'
+                 placeholder='Add todo'
+                 onKeyDown={onSubmit} />
+          <ul className='todo__list'>
+            {todos.map(t => (
+              <li key={t.get('id')}
+                  className='todo__item'
+                  onClick={toggleClick(t.get('id'))}>
+                <Todo todo={t.toJS()} />
+              </li>
+            ))}
+          </ul>
+        </div>
+    );
 }
