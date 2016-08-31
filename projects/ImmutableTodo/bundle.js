@@ -28067,7 +28067,7 @@
 
 	  if (todo.isDone) {
 	    return _react2.default.createElement(
-	      'strike',
+	      'em',
 	      null,
 	      todo.text
 	    );

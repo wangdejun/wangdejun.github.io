@@ -1,9 +1,12 @@
 // src/actions.js
-
-// succinct hack for generating passable unique ids
-const uid = () => Math.random().toString(34).slice(2);
-
+//ES6写法
+// const uid = () => Math.random().toString(34).slice(2);
+const uid = function(){
+  return Math.random().toString(34).slice(2);
+}
 export function addTodo(text) {
+  console.log("This is uid")
+  console.log(uid());
   return {
     type: 'ADD_TODO',
     payload: {

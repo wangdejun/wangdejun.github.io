@@ -2,9 +2,9 @@ import React from 'react';
 
 export function Todo(props) {
   const { todo } = props;
-
+  
   if(todo.isDone) {
-    return <em>{todo.text}</em>;
+    return <strike>{todo.text}</strike>;
   } else {
     return <span>{todo.text}</span>;
   }
@@ -24,7 +24,6 @@ export function TodoList(props) {
       addTodo(text);
     }
   };
-
 
 const toggleClick = id => event => toggleTodo(id);
 
