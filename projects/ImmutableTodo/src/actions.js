@@ -1,12 +1,11 @@
 // src/actions.js
 //ES6写法
 // const uid = () => Math.random().toString(34).slice(2);
+
 const uid = function(){
-  return Math.random().toString(34).slice(2);
+    return Math.random().toString(34).slice(2);
 }
 export function addTodo(text) {
-  console.log("This is uid")
-  console.log(uid());
   return {
     type: 'ADD_TODO',
     payload: {
@@ -20,6 +19,7 @@ export function addTodo(text) {
 export function toggleTodo(id) {
   return {
     type: 'TOGGLE_TODO',
-    payload: id
+    isDone:true,
+    payload: text
   }
 }

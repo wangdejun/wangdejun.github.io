@@ -65,7 +65,6 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// src/app.js
-
 	var store = (0, _redux.createStore)(_reducer2.default);
 
 	(0, _reactDom.render)(_react2.default.createElement(
@@ -23006,6 +23005,7 @@
 	    switch (action.type) {
 	        case 'ADD_TODO':
 	            return todos.push((0, _immutable.Map)(action.payload));
+
 	        case 'TOGGLE_TODO':
 	            return todos.map(function (t) {
 	                if (t.get('id') === action.payload) {
@@ -23016,6 +23016,7 @@
 	                    return t;
 	                }
 	            });
+
 	        default:
 	            return todos;
 	    }
@@ -28031,8 +28032,12 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 	var TodoList = exports.TodoList = (0, _reactRedux.connect)(function mapStateToProps(state) {
+	  console.log('-state-');
+	  console.log(state);
 	  return { todos: state };
 	}, function mapDispatchToProps(dispatch) {
+	  console.log('dispatch');
+	  console.log(dispatch);
 	  return {
 	    addTodo: function addTodo(text) {
 	      return dispatch((0, _actions.addTodo)(text));
@@ -28067,9 +28072,9 @@
 
 	  if (todo.isDone) {
 	    return _react2.default.createElement(
-	      'em',
+	      'strike',
 	      null,
-	      todo.text
+	      todo.id
 	    );
 	  } else {
 	    return _react2.default.createElement(
@@ -28139,12 +28144,12 @@
 	exports.addTodo = addTodo;
 	exports.toggleTodo = toggleTodo;
 	// src/actions.js
+	//ES6写法
+	// const uid = () => Math.random().toString(34).slice(2);
 
-	// succinct hack for generating passable unique ids
 	var uid = function uid() {
 	  return Math.random().toString(34).slice(2);
 	};
-
 	function addTodo(text) {
 	  return {
 	    type: 'ADD_TODO',
@@ -28159,7 +28164,8 @@
 	function toggleTodo(id) {
 	  return {
 	    type: 'TOGGLE_TODO',
-	    payload: id
+	    isDone: true,
+	    payload: text
 	  };
 	}
 
