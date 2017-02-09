@@ -35,12 +35,16 @@ body.slide-active {
     display: block;
     height: 3px;
     margin: 5px 0 0 0;
+    background:#000;
 }
 #slide-nav .navbar-toggle.slide-active .icon-bar {
     background: orange;
 }
 .navbar-header {
     position: relative;
+}
+#nav-header{
+    display: block;
 }
 /* un fix the navbar when active so that all the menu items are accessible */
 /*.navbar.navbar-fixed-top.slide-active {*/
@@ -49,6 +53,12 @@ body.slide-active {
 
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media (max-width:767px) {
+    #nav-header{
+        display: none;
+    }
+    img{
+        display: none;
+    }
     #slide-nav .container {
         margin: 0!important;
         padding: 0!important;
@@ -79,6 +89,7 @@ body.slide-active {
         min-width: 0;
         width: 100%;
         margin: 0;
+        padding:15px 0px;
     }
     #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
         min-width: 0;
@@ -86,7 +97,10 @@ body.slide-active {
         white-space: normal;
     }
     #slide-nav {
-        border-top: 0
+        border-top: 0;
+        background: #fff;
+        border-color: #fff;
+        box-shadow: 2px 2px 5px #eee;
     }
     #slide-nav.navbar-inverse #slidemenu {
         background: #222;

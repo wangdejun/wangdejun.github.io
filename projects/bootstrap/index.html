@@ -12,10 +12,22 @@
                 overflow:hidden!important;
                 overflow-y:auto!important;
             }
+            .container-fluid{
+                padding-left:0px!important;
+                padding-right:0px!important;
+            }
         </style>
     </head>
+
     <body>
-        <div>
+        <div class="navbar" id="nav-header">
+            <div>男士</div>
+            <div>女士</div>            
+            <div>ModeSens</div>
+            <div>CNY中文</div>
+            <div>PersonalInfo<div>
+        </div>
+
         <div class="navbar navbar-inverse" role="navigation" id ="slide-nav">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,13 +45,16 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">服装 </a>
                             <ul class="dropdown-menu">
-                                <li><a>全部女装<a></li>
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="#">Separated link</a></li>
-                            <div role="separator" class="divider"></div>
-                                
+                                <li>                                    
+                                    <div role="separator" class="divider"></div>
+                                    <img src="./img/wang.jpg" alt=""/>
+                                    <img src="./img/wang.jpg" alt=""/>
+                                    <img src="./img/wang.jpg" alt=""/>
+                                </li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -161,7 +176,6 @@
             <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
             <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>                        
         </div>
-        </div>
 
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
         <script src="./dist/js/bootstrap.min.js"></script>
@@ -169,7 +183,7 @@
             $(document).ready(function(){
                 //stick in the fixed 100% height behind the navbar but don't wrap it
                 //$('#slide-nav.navbar-inverse').after($('<div id="navbar-height-col"></div>'));
-                //$('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+                $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));
                 // Enter your ids or classes
                 var toggler = '.navbar-toggle';
                 var pagewrapper = '#page-content';
