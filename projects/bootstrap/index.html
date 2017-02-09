@@ -3,18 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta id="viewport" name="viewport" content="width=device-width, width=765, initial-scale=1.0, maximum-scale=1.0, user-scalable = 0" />
-        <title>bootstram model</title>
+        <meta id="viewport" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>bootstrap model</title>
         <link rel="stylesheet" href="./dist/css/bootstrap.css">
         <link rel="stylesheet" href="./dist/css/rbase.css">        
+        <style>
+            html,body{
+                overflow:hidden!important;
+                overflow-y:auto!important;
+            }
+        </style>
     </head>
     <body>
-
-        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="./dist/js/bootstrap.min.js"></script>
-        
-        <div>
-
         <div>
         <div class="navbar navbar-inverse" role="navigation" id ="slide-nav">
             <div class="container-fluid">
@@ -142,15 +142,34 @@
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </div>
-        <div id="page-content" class="container-fluid" style="width:100%;height:1000px;border:1px solid #eee;margin-top:52px;">
-            This is a body 1
+        <div id="page-content" class="container">
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>                        
+        </div>
         </div>
 
+        <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="./dist/js/bootstrap.min.js"></script>
         <script>
-            $(document).ready(function () {
+            $(document).ready(function(){
                 //stick in the fixed 100% height behind the navbar but don't wrap it
-                $('#slide-nav.navbar-inverse').after($('<div id="navbar-height-col"></div>'));
-                $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
+                //$('#slide-nav.navbar-inverse').after($('<div id="navbar-height-col"></div>'));
+                //$('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));  
                 // Enter your ids or classes
                 var toggler = '.navbar-toggle';
                 var pagewrapper = '#page-content';
@@ -159,10 +178,8 @@
                 var slidewidth = '80%';
                 var menuneg = '-100%';
                 var slideneg = '-80%';
-
                 $("#slide-nav").on("click", toggler, function (e) {
                     var selected = $(this).hasClass('slide-active');
-
                     $('#slidemenu').stop().animate({left: selected ? menuneg : '0%'},350);
                     $('#navbar-height-col').stop().animate({left: selected ? slideneg : '0%'},350);
                     $(pagewrapper).stop().animate({left: selected ? '0%' : slidewidth},350);
@@ -173,8 +190,9 @@
                     $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
                 });
                 var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
-
+                //当尺寸大于767px或者点击了关闭按钮，那么移除slide-active
                 $(window).on("resize", function () {
+                    sliderActive = false;
                     if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
                         $(selected).removeClass('slide-active');
                     }

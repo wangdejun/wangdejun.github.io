@@ -1,16 +1,16 @@
 
 /* adjust body when menu is open */
 body.slide-active {
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 /*first child of #page-content so it doesn't shift around*/
 .no-margin-top {
-    margin-top: 0px!important
+    margin-top: 0px!important;
 }
 /*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
 #page-content {
     position: relative;
-    padding-top: 70px;
+    /*padding-top: 70px;*/
     left: 0;
 }
 #page-content.slide-active {
@@ -43,12 +43,12 @@ body.slide-active {
     position: relative;
 }
 /* un fix the navbar when active so that all the menu items are accessible */
-.navbar.navbar-fixed-top.slide-active {
-    position: relative;
-}
+/*.navbar.navbar-fixed-top.slide-active {*/
+    /*position: relative;*/
+/*}*/
 
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
-@media (max-width:767px) { 
+@media (max-width:767px) {
     #slide-nav .container {
         margin: 0!important;
         padding: 0!important;
@@ -59,7 +59,7 @@ body.slide-active {
         padding: 0 15px;
     }
     #slide-nav .navbar.slide-active {
-        position: absolute;
+        position: fixed;
         width: 80%;
         top: -1px;
         z-index: 1000;
@@ -128,13 +128,13 @@ body.slide-active {
     }
 }
 
-
+/*最小尺寸为768px时*/
 @media (min-width:768px) { 
     #page-content {
         left: 0!important
     }
     .navbar.navbar-fixed-top.slide-active {
-        position: fixed
+        position: absolute;
     }
     .navbar-header {
         left: 0!important
