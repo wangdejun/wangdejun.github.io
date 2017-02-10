@@ -3593,7 +3593,7 @@ tbody.collapse.in {
     display: block;
     position: fixed;
     width: 100%;
-    top: 152px;
+    top: 112px;
 }
 .open > a {
   outline: 0;

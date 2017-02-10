@@ -43,7 +43,7 @@ body.slide-active {
 .navbar-header {
     position: relative;
 }
-#nav-header{
+#title-header{
     display: block;
 }
 /* un fix the navbar when active so that all the menu items are accessible */
@@ -53,7 +53,7 @@ body.slide-active {
 
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media (max-width:767px) {
-    #nav-header{
+    #title-header{
         display: none;
     }
     img{
@@ -83,13 +83,13 @@ body.slide-active {
         padding-left: 0;
         z-index: 2;
         top: -8px;
-        margin: 0;
+        margin: 58px 0px;
     }
     .slide-nav #slidemenu .navbar-nav {
         min-width: 0;
         width: 100%;
         margin: 0;
-        padding:15px 0px;
+        padding:0px;
     }
     .slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
         min-width: 0;
@@ -104,7 +104,7 @@ body.slide-active {
     }
     .slide-nav.navbar-inverse #slidemenu {
         background: #222;
-        padding: 15px 5px;
+        padding: 0px;
     }
     /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
     #navbar-height-col {
@@ -175,7 +175,7 @@ body.slide-active {
     .navbar-header {
         left: 0!important
     }
-    #nav-header{
+    #title-header{
         display: flex;
         justify-content: space-between;
         align-items: center;
