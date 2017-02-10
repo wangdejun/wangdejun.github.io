@@ -334,11 +334,11 @@
                 var slideneg = '-80%';
                 $(".slide-nav").on("click", toggler, function (e) {
                     var selected = $(this).hasClass('slide-active');
-                    $('#slidemenu').stop().animate({left: selected ? menuneg : '0%'},350);
-                    $('#slidemenu-men').stop().animate({left: selected ? menuneg : '0%'},350);                    
-                    $('#navbar-height-col').stop().animate({left: selected ? slideneg : '0%'},350);
-                    $(pagewrapper).stop().animate({left: selected ? '0%' : slidewidth},350);
-                    $(navigationwrapper).stop().animate({left: selected ? '0%' : slidewidth},350);
+                    $('#slidemenu').stop().animate({left: selected ? menuneg : '0%'},200);
+                    $('#slidemenu-men').stop().animate({left: selected ? menuneg : '0%'},200);                    
+                    $('#navbar-height-col').stop().animate({left: selected ? slideneg : '0%'},200);
+                    $(pagewrapper).stop().animate({left: selected ? '0%' : slidewidth},200);
+                    $(navigationwrapper).stop().animate({left: selected ? '0%' : slidewidth},300);
 
                     $(this).toggleClass('slide-active', !selected);
                     $('#slidemenu').toggleClass('slide-active');

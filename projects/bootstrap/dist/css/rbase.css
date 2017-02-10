@@ -66,6 +66,17 @@ body.slide-active {
 .navbar{
     border:none;
 }
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #222;
+}
+.tab-content{
+    position:relative;
+}
+
 /* un fix the navbar when active so that all the menu items are accessible */
 /*.navbar.navbar-fixed-top.slide-active {*/
     /*position: relative;*/
