@@ -74,7 +74,7 @@ body.slide-active {
         top: -1px;
         z-index: 1000;
     }
-    .slide-nav #slidemenu {
+    .slide-nav #slidemenu, .slide-nav #slidemenu-men {
         background: #f7f7f7;
         left: -100%;
         width: 80%;
@@ -85,13 +85,13 @@ body.slide-active {
         top: -8px;
         margin: 58px 0px;
     }
-    .slide-nav #slidemenu .navbar-nav {
+    .slide-nav #slidemenu .navbar-nav, .slide-nav #slidemenu-men .navbar-nav {
         min-width: 0;
         width: 100%;
         margin: 0;
         padding:0px;
     }
-    .slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+    .slide-nav #slidemenu .navbar-nav .dropdown-menu li a, .slide-nav #slidemenu-men .navbar-nav .dropdown-menu li a {
         min-width: 0;
         width: 80%;
         white-space: normal;
@@ -102,7 +102,7 @@ body.slide-active {
         border-color: #fff;
         box-shadow: 2px 2px 5px #eee;
     }
-    .slide-nav.navbar-inverse #slidemenu {
+    .slide-nav.navbar-inverse #slidemenu,  .slide-nav.navbar-inverse #slidemenu-men{
         background: #222;
         padding: 0px;
     }

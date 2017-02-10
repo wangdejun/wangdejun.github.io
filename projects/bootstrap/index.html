@@ -19,20 +19,25 @@
     </head>
 
     <body>
+
+
         <div id="title-header">
             <ul class="nav nav-pills" id ="gender">
                 <li class="active"><a data-toggle="pill" href="#women-tab" style="text-align: center">女士</a></li>
                 <li><a data-toggle="pill" href="#men-tab" style="text-align: center">男士</a></li>
             </ul>
             <li id ="logo">MODESENS</li>
-            <ul id ="personal">  
-                <span class="glyphicon glyphicon-bell"></span>
-                <span class="glyphicon glyphicon-user"></span>
-            </ul>
+            <ul id ="personal"><span class="glyphicon glyphicon-bell"></span><span class="glyphicon glyphicon-user"></span></ul>
         </div>
 
         <div class="tab-content">
-            <!--女士标签-->
+            <!--抽屉页标签-->
+            <ul class="nav nav-pills" id ="gender">
+                <li class="active"><a data-toggle="pill" href="#women-tab" style="text-align: center">女士</a></li>
+                <li><a data-toggle="pill" href="#men-tab" style="text-align: center">男士</a></li>
+            </ul>
+
+            <!--女士标签-->            
             <div id="women-tab" class="navbar navbar-inverse slide-nav tab-pane active" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -189,7 +194,7 @@
                         </ul>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div id="slidemenu">
+                    <div id="slidemenu-men">
                         <ul class="nav navbar-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">男士服装 </a>
@@ -330,15 +335,17 @@
                 $(".slide-nav").on("click", toggler, function (e) {
                     var selected = $(this).hasClass('slide-active');
                     $('#slidemenu').stop().animate({left: selected ? menuneg : '0%'},350);
+                    $('#slidemenu-men').stop().animate({left: selected ? menuneg : '0%'},350);                    
                     $('#navbar-height-col').stop().animate({left: selected ? slideneg : '0%'},350);
                     $(pagewrapper).stop().animate({left: selected ? '0%' : slidewidth},350);
                     $(navigationwrapper).stop().animate({left: selected ? '0%' : slidewidth},350);
 
                     $(this).toggleClass('slide-active', !selected);
                     $('#slidemenu').toggleClass('slide-active');
+                    $('#slidemenu-men').toggleClass('slide-active');                    
                     $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
                 });
-                var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
+                var selected = '#slidemenu, #slidemenu-men, #page-content, body, .navbar, .navbar-header';
                 //当尺寸大于767px或者点击了关闭按钮，那么移除slide-active
                 $(window).on("resize", function () {
                     sliderActive = false;
