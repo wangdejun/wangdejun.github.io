@@ -46,6 +46,26 @@ body.slide-active {
 #title-header{
     display: block;
 }
+#minigender{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    width: 80%;
+    background: #eee;
+    height: 52px;
+    justify-content: space-around;
+    display: flex;
+    padding: 0px 27px 0px 0px;
+    align-items: center;
+}
+.mini-header{
+    z-index: 1000; 
+    background: rgb(255, 255, 255);
+}
+.navbar{
+    border:none;
+}
 /* un fix the navbar when active so that all the menu items are accessible */
 /*.navbar.navbar-fixed-top.slide-active {*/
     /*position: relative;*/
@@ -66,7 +86,7 @@ body.slide-active {
     }
     .slide-nav .navbar-header {
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 6 17px;
     }
     .slide-nav .navbar.slide-active {
         position: fixed;
@@ -200,6 +220,12 @@ body.slide-active {
     }
     #gender>span, #minipersonal>span{
         display:none;
+    }
+    #minigender{
+        display: none;
+    }
+    .mini-header{
+        display: none;
     }
     #gender>li{
         display: inline-block;
