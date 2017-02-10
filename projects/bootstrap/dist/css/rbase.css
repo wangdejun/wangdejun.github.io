@@ -17,7 +17,7 @@ body.slide-active {
     padding-top: 0
 }
 /* put toggle bars on the left :: not using button */
-#slide-nav .navbar-toggle {
+.slide-nav .navbar-toggle {
     cursor: pointer;
     position: relative;
     line-height: 0;
@@ -30,14 +30,14 @@ body.slide-active {
     background: transparent;
 }
 /* icon bar prettyup - optional */
-#slide-nav .navbar-toggle > .icon-bar {
+.slide-nav .navbar-toggle > .icon-bar {
     width: 100%;
     display: block;
     height: 3px;
     margin: 5px 0 0 0;
     background:#000;
 }
-#slide-nav .navbar-toggle.slide-active .icon-bar {
+.slide-nav .navbar-toggle.slide-active .icon-bar {
     background: orange;
 }
 .navbar-header {
@@ -59,22 +59,22 @@ body.slide-active {
     img{
         display: none;
     }
-    #slide-nav .container {
+    .slide-nav .container {
         margin: 0!important;
         padding: 0!important;
         height:100%;
     }
-    #slide-nav .navbar-header {
+    .slide-nav .navbar-header {
         margin: 0 auto;
         padding: 0 15px;
     }
-    #slide-nav .navbar.slide-active {
+    .slide-nav .navbar.slide-active {
         position: fixed;
         width: 80%;
         top: -1px;
         z-index: 1000;
     }
-    #slide-nav #slidemenu {
+    .slide-nav #slidemenu {
         background: #f7f7f7;
         left: -100%;
         width: 80%;
@@ -85,24 +85,24 @@ body.slide-active {
         top: -8px;
         margin: 0;
     }
-    #slide-nav #slidemenu .navbar-nav {
+    .slide-nav #slidemenu .navbar-nav {
         min-width: 0;
         width: 100%;
         margin: 0;
         padding:15px 0px;
     }
-    #slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+    .slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
         min-width: 0;
         width: 80%;
         white-space: normal;
     }
-    #slide-nav {
+    .slide-nav {
         border-top: 0;
         background: #fff;
         border-color: #fff;
         box-shadow: 2px 2px 5px #eee;
     }
-    #slide-nav.navbar-inverse #slidemenu {
+    .slide-nav.navbar-inverse #slidemenu {
         background: #222;
         padding: 15px 5px;
     }
@@ -121,17 +121,17 @@ body.slide-active {
         z-index: 1;
         border: 0;
     }
-    #slide-nav .navbar-form {
+    .slide-nav .navbar-form {
         width: 100%;
         margin: 8px 0;
         text-align: center;
         overflow: hidden;
         /*fast clearfixer*/
     }
-    #slide-nav .navbar-form .form-control {
+    .slide-nav .navbar-form .form-control {
         text-align: center
     }
-    #slide-nav .navbar-form .btn {
+    .slide-nav .navbar-form .btn {
         width: 100%
     }
     .subcategory{
@@ -139,6 +139,28 @@ body.slide-active {
     }
     #clothing-img{
         float: right;
+    }
+    #logo{
+        font-size:25px;
+        font-weight: bold;
+    }
+    #gender>li, #personal>li{
+        width:100px;
+        display:inline-block;
+    }
+    .mini-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding:10px 30px;  
+    }
+    #logo{
+        font-size:25px;
+        font-weight: bold;
+    }
+    #gender>span, #personal>span{
+        display:inline-block;
     }
 }
 
@@ -152,5 +174,36 @@ body.slide-active {
     }
     .navbar-header {
         left: 0!important
+    }
+    #nav-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding:10px 30px;
+    }
+    #minilogo{
+        display: none;
+    }
+    #logo{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    #minilogo{
+        display: none;
+    }
+    #personal{
+        display: inline-block;
+    }
+    #personal>span{
+        display: inline-block;
+    }
+    #gender>span, #minipersonal>span{
+        display:none;
+    }
+    #gender>li{
+        display: inline-block;
+        width:70px;
+        cursor:pointer;
     }
 }

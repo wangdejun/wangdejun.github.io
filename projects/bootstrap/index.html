@@ -20,26 +20,37 @@
     </head>
 
     <body>
-        <div class="navbar" id="nav-header">
-            <div>男士</div>
-            <div>女士</div>            
-            <div>ModeSens</div>
-            <div>CNY中文</div>
-            <div>PersonalInfo<div>
+
+        <div id="nav-header">
+            <ul id ="gender">
+                <li>男士</li>
+                <li>女士</li>   
+            </ul>         
+            <li id ="logo">MODESENS</li>
+            <ul id ="personal">  
+                <span class="glyphicon glyphicon-bell"></span>
+                <span class="glyphicon glyphicon-user"></span>
+            </ul>
         </div>
 
-        <div class="navbar navbar-inverse" role="navigation" id ="slide-nav">
+        <div class="navbar navbar-inverse slide-nav" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
+                <div class="navbar-header mini-header">
                     <a class="navbar-toggle">
                         <span class="sr-only"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
+                    <li id ="minilogo">MODESENS</li>
+                    <ul id="minipersonal">  
+                        <span class="glyphicon glyphicon-bell"></span>
+                        <span class="glyphicon glyphicon-user"></span>
+                    </ul>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
+
                 <div id="slidemenu">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
@@ -148,6 +159,9 @@
                         </li>
                     </ul>
 
+
+
+
                     <form class="navbar-form navbar-right" role="form">
                         <div class="form-group">
                         <input type="search" class="form-control" placeholder="Search">
@@ -158,23 +172,7 @@
             </div><!-- /.container-fluid -->
         </div>
         <div id="page-content" class="container">
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>
-            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>                        
+            <p>This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1This is a body 1</p>                    
         </div>
 
         <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -182,8 +180,8 @@
         <script>
             $(document).ready(function(){
                 //stick in the fixed 100% height behind the navbar but don't wrap it
-                //$('#slide-nav.navbar-inverse').after($('<div id="navbar-height-col"></div>'));
-                $('#slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));
+                //$('.slide-nav.navbar-inverse').after($('<div id="navbar-height-col"></div>'));
+                $('.slide-nav.navbar-default').after($('<div id="navbar-height-col"></div>'));
                 // Enter your ids or classes
                 var toggler = '.navbar-toggle';
                 var pagewrapper = '#page-content';
@@ -192,7 +190,7 @@
                 var slidewidth = '80%';
                 var menuneg = '-100%';
                 var slideneg = '-80%';
-                $("#slide-nav").on("click", toggler, function (e) {
+                $(".slide-nav").on("click", toggler, function (e) {
                     var selected = $(this).hasClass('slide-active');
                     $('#slidemenu').stop().animate({left: selected ? menuneg : '0%'},350);
                     $('#navbar-height-col').stop().animate({left: selected ? slideneg : '0%'},350);
