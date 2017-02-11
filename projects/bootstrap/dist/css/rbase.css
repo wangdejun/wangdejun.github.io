@@ -52,12 +52,13 @@ body.slide-active {
     top: 0px;
     z-index: 10;
     width: 80%;
-    background: #eee;
+    background: #fafafa;
     height: 52px;
     justify-content: space-around;
     display: flex;
-    padding: 0px 27px 0px 0px;
+    padding: 0px;
     align-items: center;
+    box-shadow: 1px 1px 5px #efefef;
 }
 .mini-header{
     z-index: 1000; 
@@ -77,6 +78,9 @@ body.slide-active {
     position:relative;
 }
 
+.dropdown{
+    border-bottom: 1px solid #ccc;
+}
 /* un fix the navbar when active so that all the menu items are accessible */
 /*.navbar.navbar-fixed-top.slide-active {*/
     /*position: relative;*/
@@ -84,6 +88,9 @@ body.slide-active {
 
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media (max-width:767px) {
+    .navbar-form{
+        display: none;
+    }
     #title-header{
         display: none;
     }
@@ -115,6 +122,7 @@ body.slide-active {
         z-index: 2;
         top: -8px;
         margin: 58px 0px;
+        padding-bottom:250px!important;
     }
     .slide-nav #slidemenu .navbar-nav, .slide-nav #slidemenu-men .navbar-nav {
         min-width: 0;
@@ -127,6 +135,7 @@ body.slide-active {
         width: 80%;
         white-space: normal;
     }
+
     .slide-nav {
         border-top: 0;
         background: #fff;
@@ -134,7 +143,7 @@ body.slide-active {
         box-shadow: 2px 2px 5px #eee;
     }
     .slide-nav.navbar-inverse #slidemenu,  .slide-nav.navbar-inverse #slidemenu-men{
-        background: #222;
+        background: #eee;
         padding: 0px;
     }
     /* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
